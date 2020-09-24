@@ -48,7 +48,7 @@
 			var validatePass2 = (rule, value, callback) => {
 				if (value === '') {
 					callback(new Error('请再次输入密码'));
-				} else if (value !== this.loginrules2.password) {
+				} else if (value !== this.registerform.password) {
 					callback(new Error('两次输入密码不一致!'));
 				} else {
 					callback();
@@ -60,10 +60,18 @@
 					username:'admin',
 					password:'123456'
 				},
-					
-            //	验证规则
+			// 注册表单数据
+				dialogFormVisible: false,
+				registerform: {
+					username: '',
+					password: '',
+					repassword: ''
+				},
+				formLabelWidth: '120px',
+			//	验证规则
+			
 				loginrules1:{
-            //	必须与上面的属性名保持一致
+            //	必须与上面的属性名保持一致，登录的
 					username:[
             			{ required: true, message: '请输入用户名', trigger: 'blur' },
             			{ min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
@@ -74,7 +82,7 @@
          			]
 				},
 				loginrules2:{
-            //	必须与上面的属性名保持一致
+            //	注册的验证规则
 					username:[
             			{ required: true, message: '请输入用户名', trigger: 'blur' },
             			{ min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
@@ -86,15 +94,7 @@
 					repassword:[
            				{ validator: validatePass2, trigger: 'blur' }
          			]	  
-				},
-			// 注册表单数据
-				dialogFormVisible: false,
-				registerform: {
-					username: '',
-					password: '',
-					repassword: ''
-				},
-				formLabelWidth: '120px'
+				}
 			}
 		},
 		methods:{
