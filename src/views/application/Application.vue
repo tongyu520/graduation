@@ -188,7 +188,6 @@ export default {
         getApplyStatus(){
             this.$http.get('/status',{'params':{page:this.query.page}}).then((res)=>{
                 this.tableData=res.data
-                console.log(res)
             })
         },
         //	监听页码值改变的事件

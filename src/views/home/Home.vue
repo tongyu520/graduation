@@ -1,9 +1,11 @@
 <template>
-  <swiper>
-    <swiper-item v-for="item in banners" :key='item.image'>
-      <img :src="item.image" alt="">
-    </swiper-item>
-  </swiper>
+    <div class="home">
+        <swiper>
+            <swiper-item v-for="item in banners" :key='item.image'>
+            <img :src="item.image" alt="">
+            </swiper-item>
+        </swiper>
+    </div>
 </template>
 
 <script>
@@ -16,8 +18,8 @@
             banners:[
                 {image: require(`@/assets/img/three.jpg`) },
                 {image: require(`@/assets/img/two.jpg`) },
-                {image: require(`@/assets/img/one.jpg`) },
-                {image: require(`@/assets/img/four.jpg`) }
+                {image: require(`@/assets/img/five.jpg`) },
+                {image: require(`@/assets/img/six.jpg`) }
             ]
         }
     },
