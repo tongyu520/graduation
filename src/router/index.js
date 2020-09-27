@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 const Login = ()=>import('components/common/Login.vue')
 const Home = ()=>import('views/home/Home.vue')
 const News = ()=>import('views/news/News.vue')
-const Elegant = ()=>import('views/elegant/Elegant.vue')
+const Active = ()=>import('views/active/Active.vue')
 const Search = ()=>import('views/search/Search.vue')
 const Down = ()=>import('views/down/Down.vue')
 const Rules = ()=>import('views/rules/Rules.vue')
@@ -37,7 +37,7 @@ const routes = [
       },
       {
         path:'/elegant',
-        component:Elegant
+        component:Active
       },
       {
         path:'/search',

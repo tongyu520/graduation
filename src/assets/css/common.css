@@ -4,3 +4,10 @@
 .pl{
     padding-left:20px;
 }
+.boxFlex{
+    display: flex;
+    justify-content:space-between;
+}
+.pb{
+    padding-bottom:10px;
+}

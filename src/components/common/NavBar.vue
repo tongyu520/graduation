@@ -20,7 +20,7 @@
 export default {
     data(){
         return{
-            navItem:['首页','社团快讯','社团风采','社团检索','资料下载','规章制度','申请社团'],
+            navItem:['首页','社团快讯','社团活动','社团检索','资料下载','规章制度','申请社团'],
             paths:['/home','/news','/elegant','/search','/down','/rules','application']
         }
     },
